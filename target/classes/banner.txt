@@ -1,0 +1,15 @@
+${AnsiColor.BRIGHT_GREEN}
+ _______           _______  _______  _______  _______  _        _______
+(  ____ )|\     /|(  ___  )(  ____ )(       )(  ___  )( (    /|(  ____ \
+| (    )|| )   ( || (   ) || (    )|| () () || (   ) ||  \  ( || (    \/
+| (____)|| (___) || (___) || (____)|| || || || |   | ||   \ | || (__
+|  _____)|  ___  ||  ___  ||     __)| |(_)| || |   | || (\ \) ||  __)
+| (      | (   ) || (   ) || (\ (   | |   | || |   | || | \   || (
+| )      | )   ( || )   ( || ) \ \__| )   ( || (___) || )  \  || (____/\
+|/       |/     \||/     \||/   \__/|/     \|(_______)|/    )_)(_______/
+(developed by GK)
+${AnsiColor.DEFAULT}
+${AnsiColor.BRIGHT_YELLOW} Application Version: ${info.app.version}${AnsiColor.DEFAULT}
+ Java Version : ${java.version}
+ Spring Boot Version: ${spring-boot.version}
+

@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: PharmOne
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+# Expose all actuator endpoints (useful for development)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always # Show full details in the health check (e.g., Database status, Disk space)
+
+
+info:
+  app:
+    version: 1.0.1-SNAPSHOT

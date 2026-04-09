@@ -1,0 +1,19 @@
+#database properties
+spring:
+  datasource:
+    url: jdbc:postgresql://prod-server:5432/pharmone_prod
+    username: postgres
+    password: password #replace it with prod server details
+  jpa:
+    hibernate:
+      ddl-auto: validate # NEVER use 'update' in prod!
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+resilience4j:
+  timelimiter:
+    instances:
+      medicineService:
+        timeoutDuration: 2s # Strict: Fail fast if it takes > 2 seconds
